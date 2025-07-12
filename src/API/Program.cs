@@ -1,4 +1,5 @@
-﻿using Infrastructure;
+﻿using API.Extensions;
+using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
 
@@ -9,9 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 
-builder.Services.AddEndpointsApiExplorer(); // Enable OpenAPI support
-builder.Services.AddSwaggerGen();           // Generate Swagger docs
-
+builder.Services.AddOpenApiDocumentation();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddInfrastructure();
@@ -37,14 +36,7 @@ if (app.Environment.IsDevelopment())
         logger.LogError(ex, "Failed to apply database migrations");
     }
 
-    app.UseSwagger();
-
-    app.UseReDoc(options =>
-    {
-        options.RoutePrefix = ""; // default to root route/link
-        options.DocumentTitle = "NovaStarterKit API Documentation";
-        options.SpecUrl = "/swagger/v1/swagger.json";
-    });
+    app.UseOpenApiDocumentation();
 }
 
 app.UseHttpsRedirection();
