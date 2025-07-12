@@ -1,0 +1,42 @@
+## .NET & Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build Results
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+*.dll
+*.exe
+*.app
+*.log
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Auto-generated files
+Generated_Code/
+*.generated.cs
+
+# Secrets
+appsettings.*.local.json
+.env
+secrets.json
+
+# Nuke build (if used)
+.temp/
+
+# Logs
+*.log
+
+# Dotnet tools
+/.tools/
