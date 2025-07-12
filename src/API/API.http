@@ -1,6 +1,16 @@
-@API_HostAddress = http://localhost:5233
+@API_HostAddress = https://localhost:7241
 
-GET {{API_HostAddress}}/weatherforecast/
+### Create User
+POST {{API_HostAddress}}/api/users
+Content-Type: application/json
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@novastarter.kit",
+  "password": "password",
+  "role": "User"
+}
+
+### Get User by ID
+GET {{API_HostAddress}}/api/users/195f61dd-5ea3-4642-817d-6dd7684cd3bd
 Accept: application/json
-
-###
