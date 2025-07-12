@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApiDocumentation();
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddInfrastructure();
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
