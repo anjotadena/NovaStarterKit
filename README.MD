@@ -70,13 +70,13 @@ dotnet restore
 3. Apply database migrations
 
 ```bash
-dotnet ef database update --project src/NovaStartKit.Persistence --startup-project src/NovaStartKit.API
+dotnet ef database update --project src/Persistence --startup-project src/API
 ```
 
 4. Run the API
 
 ```bash
-dotnet run --project src/NovaStartKit.API
+dotnet run --project src/API
 ```
 
 5. Open Swagger UI
@@ -92,13 +92,13 @@ https://localhost:{port}/swagger
 ### Unit Tests
 
 ```bash
-dotnet test ./tests/NovaStartKit.UnitTests --filter "Category!=Integration"
+dotnet test ./tests/UnitTests --filter "Category!=Integration"
 ```
 
 ### Integration Tests
 
 ```bash
-dotnet test ./tests/NovaStartKit.IntegrationTests --filter "Category=Integration"
+dotnet test ./tests/IntegrationTests --filter "Category=Integration"
 ```
 
 ---
