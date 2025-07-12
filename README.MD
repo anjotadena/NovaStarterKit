@@ -27,14 +27,14 @@ NovaStartKit is a clean architecture, production-ready Web API starter kit built
 
 NovaStartKit/
 ├── src/
-│   ├── NovaStartKit.API/             # API layer (Controllers, Middleware, DI)
-│   ├── NovaStartKit.Application/     # CQRS, DTOs, Interfaces
-│   ├── NovaStartKit.Domain/          # Entities, Value Objects, Interfaces
-│   ├── NovaStartKit.Infrastructure/  # Services, External APIs
-│   └── NovaStartKit.Persistence/     # EF Core DbContext and Migrations
+│   ├── API/             # API layer (Controllers, Middleware, DI)
+│   ├── Application/     # CQRS, DTOs, Interfaces
+│   ├── Domain/          # Entities, Value Objects, Interfaces
+│   ├── Infrastructure/  # Services, External APIs
+│   └── Persistence/     # EF Core DbContext and Migrations
 ├── tests/
-│   ├── NovaStartKit.UnitTests/       # Unit tests (fast, isolated)
-│   └── NovaStartKit.IntegrationTests/# Integration tests (real DB/API interaction)
+│   ├── UnitTests/       # Unit tests (fast, isolated)
+│   └── IntegrationTests/# Integration tests (real DB/API interaction)
 ├── .editorconfig
 ├── .gitignore
 ├── global.json
@@ -57,7 +57,7 @@ NovaStartKit/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/NovaStartKit.git
+git clone https://github.com/anjotadena/NovaStartKit.git
 cd NovaStartKit
 ````
 
