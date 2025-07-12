@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Entities;
+using Domain.Interfaces;
+using Infrastructure.Repositories;
+using Infrastructure.UnitOfWork;
+using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +16,10 @@ builder.Services.AddEndpointsApiExplorer(); // Enable OpenAPI support
 builder.Services.AddSwaggerGen();           // Generate Swagger docs
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped(typeof(IRepository<,>), typeof(GenericRepository<,>));
+builder.Services.AddScoped<IRepository<User, Guid>, UserRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
