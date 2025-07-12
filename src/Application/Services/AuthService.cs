@@ -17,7 +17,9 @@ public class AuthService : IAuthService
 
     public async Task<string?> LoginAsync(string email, string password)
     {
-        var user = (await _userRepository.FindAsync(u => u.Email.Value == email)).FirstOrDefault();
+        var emailRequest = email.ToLowerInvariant();
+
+        var user = (await _userRepository.FindAsync(u => u.Email.Value == emailRequest)).FirstOrDefault();
 
         if (user is null || !user.VerifyPassword(password))
         {

@@ -28,9 +28,9 @@ public class GenericRepository<T, TId> : IRepository<T, TId> where T : BaseEntit
         _dbSet.Remove(entity);
     }
 
-    public virtual async Task<List<T>> FindAsync(Expression<Func<T, bool>> predicate)
+    public virtual async Task<List<T>> FindAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
     {
-        return await _dbSet.Where(predicate).ToListAsync();
+        return await _dbSet.Where(predicate).ToListAsync(cancellationToken);
     }
 
     public virtual async Task<List<T>> GetAllAsync(CancellationToken cancellationToken = default)
@@ -41,6 +41,11 @@ public class GenericRepository<T, TId> : IRepository<T, TId> where T : BaseEntit
     public virtual async Task<T?> GetByIdAsync(TId id, CancellationToken cancellationToken = default)
     {
         return await _dbSet.FindAsync(new Object[] { id! }, cancellationToken);
+    }
+
+    public async Task<T?> SingleOrDefaultAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
+    {
+        return await _dbSet.SingleOrDefaultAsync(predicate, cancellationToken);
     }
 
     public virtual void Update(T entity)

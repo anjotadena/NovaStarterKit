@@ -8,7 +8,7 @@ public sealed record Email
 
     private Email(string value)
     {
-        Value = value;
+        Value = value.ToLowerInvariant(); // Normalize
     }
 
     public static Email Create(string email)
