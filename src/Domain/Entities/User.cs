@@ -21,13 +21,13 @@ public class User : BaseEntity<Guid>
 
     private User() { }
 
-    public User(string firstName, string lastName, Email email, string hashedPassword, Role role)
+    public User(string firstName, string lastName, Email email, string password, Role role)
     {
         Id = Guid.NewGuid();
         FirstName = firstName;
         LastName = lastName;
         Email = email;
-        HashedPassword = hashedPassword;
+        HashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
         Role = role;
     }
 
@@ -40,4 +40,6 @@ public class User : BaseEntity<Guid>
     {
         Email = value;
     }
+
+    public bool VerifyPassword(string password) => BCrypt.Net.BCrypt.Verify(password, HashedPassword);
 }

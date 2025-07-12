@@ -1,5 +1,7 @@
-﻿using Domain.Entities;
+﻿using Application.Interfaces;
+using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.Auth;
 using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,7 +18,9 @@ public static class DependencyInjection
         services.AddScoped<IRepository<User, Guid>, UserRepository>();
 
         // Unit of work  
-        services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>(); // Fully qualify the type to avoid namespace conflict  
+        services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>(); // Fully qualify the type to avoid namespace conflict
+
+        services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 
         return services;
     }

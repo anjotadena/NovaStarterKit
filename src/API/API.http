@@ -4,13 +4,21 @@
 POST {{API_HostAddress}}/api/users
 Content-Type: application/json
 {
-  "firstName": "Jane",
+  "firstName": "John",
   "lastName": "Doe",
-  "email": "jane.doe@novastarter.kit",
+  "email": "john.doe@novastarter.kit",
   "password": "password",
-  "role": "User"
+  "role": "Admin"
 }
 
 ### Get User by ID
-GET {{API_HostAddress}}/api/users/195f61dd-5ea3-4642-817d-6dd7684cd3bd
+GET {{API_HostAddress}}/api/users/6afd5e9f-2b65-4e03-9d33-d2606b884c50
 Accept: application/json
+
+### Login User
+POST {{API_HostAddress}}/api/auth/login
+Content-Type: application/json
+{
+  "email": "john.doe@novastarter.kit",
+  "password": "password"
+}

@@ -1,4 +1,5 @@
-﻿using Domain.Common;
+﻿using System.Linq.Expressions;
+using Domain.Common;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
@@ -25,6 +26,11 @@ public class GenericRepository<T, TId> : IRepository<T, TId> where T : BaseEntit
     public virtual void Delete(T entity)
     {
         _dbSet.Remove(entity);
+    }
+
+    public virtual async Task<List<T>> FindAsync(Expression<Func<T, bool>> predicate)
+    {
+        return await _dbSet.Where(predicate).ToListAsync();
     }
 
     public virtual async Task<List<T>> GetAllAsync(CancellationToken cancellationToken = default)
