@@ -1,5 +1,11 @@
-﻿namespace Infrastructure.Repositories;
+﻿using Domain.Entities;
+using Persistence.Contexts;
 
-public class UserRepository
+namespace Infrastructure.Repositories;
+
+public class UserRepository : GenericRepository<User, Guid>
 {
+    public UserRepository(AppDbContext appDbContext) : base(appDbContext)
+    {
+    }
 }
