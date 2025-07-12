@@ -1,5 +1,4 @@
 ﻿using Domain.Entities;
-using Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -26,10 +25,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         {
             email.Property(e => e.Value)
                 .HasColumnName("Email")
-                .HasMaxLength(200)
-                .IsRequired();
-        });
+                .IsRequired()
+                .HasMaxLength(200);
 
-        builder.HasIndex("Email").IsUnique();
+            email.HasIndex(e => e.Value).IsUnique();
+        });
     }
 }
