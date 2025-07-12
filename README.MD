@@ -4,6 +4,21 @@
 
 NovaStartKit is a clean architecture, production-ready Web API starter kit built with .NET 9. It provides a solid foundation for building modular, maintainable, and testable APIs based on SOLID principles and modern design practices.
 
+## About the Repository
+
+This repository contains **NovaStartKit**, a modern ASP.NET Core 9 Web API starter template built using Clean Architecture principles.
+
+It is designed for developers and teams who want to:
+
+- Start new .NET 9 projects with a clear and consistent architecture.
+- Follow best practices from day one (SOLID, CQRS, separation of concerns).
+- Build modular, testable, and maintainable services ready for production.
+- Rapidly prototype or scale to enterprise-level systems.
+
+The structure enforces boundaries between layers (API, Application, Domain, Infrastructure, Persistence) and separates concerns to encourage long-term project health.
+
+Whether you're building a microservice, monolith, or modular system — this kit provides a reliable foundation.
+
 ---
 
 ## Technology Stack
