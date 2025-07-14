@@ -37,6 +37,7 @@ secrets.json
 
 # Logs
 *.log
+log-*.log
 
 # Dotnet tools
 /.tools/

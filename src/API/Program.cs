@@ -1,12 +1,13 @@
-﻿using System.Text;
-using API.Extensions;
+﻿using API.Extensions;
 using Application;
 using Infrastructure;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using Persistence;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Use serilog as default
+builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration));
 
 // Add services to the container.
 builder.Services.AddControllers();

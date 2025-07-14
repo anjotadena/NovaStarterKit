@@ -1,7 +1,9 @@
 ﻿using Application.Interfaces;
+using Domain.Common;
 using Domain.Entities;
 using Domain.Interfaces;
 using Infrastructure.Auth;
+using Infrastructure.Logging;
 using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,6 +13,8 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
+        services.AddScoped(typeof(IAppLogger<>), typeof(SerilogAdapter<>));
+
         // Generic fallback for all entities  
         services.AddScoped(typeof(IRepository<,>), typeof(GenericRepository<,>));
 
