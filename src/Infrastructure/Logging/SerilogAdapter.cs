@@ -1,4 +1,4 @@
-﻿using Domain.Common;
+﻿using Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Logging;

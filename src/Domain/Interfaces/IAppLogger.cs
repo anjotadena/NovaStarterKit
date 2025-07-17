@@ -1,4 +1,4 @@
-﻿namespace Domain.Common;
+﻿namespace Domain.Interfaces;
 
 public interface IAppLogger<T>
 {
