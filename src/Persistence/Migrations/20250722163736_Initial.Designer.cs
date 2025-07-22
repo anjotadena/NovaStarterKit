@@ -12,8 +12,8 @@ using Persistence.Contexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250722143930_AddRolesAndPermissions")]
-    partial class AddRolesAndPermissions
+    [Migration("20250722163736_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,35 +79,35 @@ namespace Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("550e8400-e29b-41d4-a716-446655440001"),
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 739, DateTimeKind.Utc).AddTicks(7585),
+                            Id = new Guid("7a2b59d7-b603-406d-99a6-0955792dfc90"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "System",
                             Description = "System Administrator with full access",
                             IsActive = true,
                             Name = "Admin",
-                            UpdatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 739, DateTimeKind.Utc).AddTicks(7588),
+                            UpdatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UpdatedBy = "System"
                         },
                         new
                         {
-                            Id = new Guid("550e8400-e29b-41d4-a716-446655440002"),
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 739, DateTimeKind.Utc).AddTicks(8149),
+                            Id = new Guid("7a2b59d7-b603-406d-99a6-0955792dfc91"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "System",
                             Description = "Standard user with limited access",
                             IsActive = true,
                             Name = "User",
-                            UpdatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 739, DateTimeKind.Utc).AddTicks(8149),
+                            UpdatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UpdatedBy = "System"
                         },
                         new
                         {
-                            Id = new Guid("550e8400-e29b-41d4-a716-446655440003"),
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 739, DateTimeKind.Utc).AddTicks(8151),
+                            Id = new Guid("7a2b59d7-b603-406d-99a6-0955792dfc92"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "System",
                             Description = "Moderator with content management permissions",
                             IsActive = true,
                             Name = "Moderator",
-                            UpdatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 739, DateTimeKind.Utc).AddTicks(8152),
+                            UpdatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UpdatedBy = "System"
                         });
                 });
@@ -247,330 +247,360 @@ namespace Persistence.Migrations
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440001"),
                             Action = "Create",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 742, DateTimeKind.Utc).AddTicks(2195),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to create users",
                             Name = "Users.Create",
                             Resource = "Users",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440002"),
                             Action = "Read",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(218),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to read users",
                             Name = "Users.Read",
                             Resource = "Users",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440003"),
                             Action = "Update",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(297),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to update users",
                             Name = "Users.Update",
                             Resource = "Users",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440004"),
                             Action = "Delete",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(305),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to delete users",
                             Name = "Users.Delete",
                             Resource = "Users",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440005"),
                             Action = "Manage",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(310),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to manage users",
                             Name = "Users.Manage",
                             Resource = "Users",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440006"),
                             Action = "Create",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(321),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to create roles",
                             Name = "Roles.Create",
                             Resource = "Roles",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440007"),
                             Action = "Read",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(325),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to read roles",
                             Name = "Roles.Read",
                             Resource = "Roles",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440008"),
                             Action = "Update",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(329),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to update roles",
                             Name = "Roles.Update",
                             Resource = "Roles",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440009"),
                             Action = "Delete",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(331),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to delete roles",
                             Name = "Roles.Delete",
                             Resource = "Roles",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440010"),
                             Action = "Manage",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(355),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to manage roles",
                             Name = "Roles.Manage",
                             Resource = "Roles",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440011"),
                             Action = "Create",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(360),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to create permissions",
                             Name = "Permissions.Create",
                             Resource = "Permissions",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440012"),
                             Action = "Read",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(365),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to read permissions",
                             Name = "Permissions.Read",
                             Resource = "Permissions",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440013"),
                             Action = "Update",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(369),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to update permissions",
                             Name = "Permissions.Update",
                             Resource = "Permissions",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440014"),
                             Action = "Delete",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(372),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to delete permissions",
                             Name = "Permissions.Delete",
                             Resource = "Permissions",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440015"),
                             Action = "Manage",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(376),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to manage permissions",
                             Name = "Permissions.Manage",
                             Resource = "Permissions",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440016"),
                             Action = "Create",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(379),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to create content",
                             Name = "Content.Create",
                             Resource = "Content",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440017"),
                             Action = "Read",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(383),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to read content",
                             Name = "Content.Read",
                             Resource = "Content",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440018"),
                             Action = "Update",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(388),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to update content",
                             Name = "Content.Update",
                             Resource = "Content",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440019"),
                             Action = "Delete",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(392),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to delete content",
                             Name = "Content.Delete",
                             Resource = "Content",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440020"),
                             Action = "Manage",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(395),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to manage content",
                             Name = "Content.Manage",
                             Resource = "Content",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440021"),
                             Action = "Create",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(399),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to create reports",
                             Name = "Reports.Create",
                             Resource = "Reports",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440022"),
                             Action = "Read",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(402),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to read reports",
                             Name = "Reports.Read",
                             Resource = "Reports",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440023"),
                             Action = "Update",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(406),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to update reports",
                             Name = "Reports.Update",
                             Resource = "Reports",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440024"),
                             Action = "Delete",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(409),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to delete reports",
                             Name = "Reports.Delete",
                             Resource = "Reports",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440025"),
                             Action = "Manage",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(412),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to manage reports",
                             Name = "Reports.Manage",
                             Resource = "Reports",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440026"),
                             Action = "Create",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(424),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to create settings",
                             Name = "Settings.Create",
                             Resource = "Settings",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440027"),
                             Action = "Read",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(428),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to read settings",
                             Name = "Settings.Read",
                             Resource = "Settings",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440028"),
                             Action = "Update",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(432),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to update settings",
                             Name = "Settings.Update",
                             Resource = "Settings",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440029"),
                             Action = "Delete",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(435),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to delete settings",
                             Name = "Settings.Delete",
                             Resource = "Settings",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         },
                         new
                         {
                             Id = new Guid("550e8400-e29b-41d4-a716-446655440030"),
                             Action = "Manage",
-                            CreatedAt = new DateTime(2025, 7, 22, 14, 39, 29, 752, DateTimeKind.Utc).AddTicks(439),
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CreatedBy = "System",
                             Description = "Permission to manage settings",
                             Name = "Settings.Manage",
                             Resource = "Settings",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UpdatedBy = "System"
                         });
                 });

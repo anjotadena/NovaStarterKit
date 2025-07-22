@@ -1,0 +1,23 @@
+[2025-07-23 00:30:54 ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [Email] nvarchar(200) NOT NULL,
+    [HashedPassword] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [IsEmailConfirmed] bit NOT NULL,
+    [LastLoginDate] datetime2 NULL,
+    [SecurityStamp] nvarchar(100) NOT NULL,
+    [ConcurrencyStamp] nvarchar(100) NOT NULL,
+    [FailedLoginAttempts] int NOT NULL,
+    [LockoutEnd] datetime2 NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [DeletedAt] datetime2 NULL,
+    [DeletedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
