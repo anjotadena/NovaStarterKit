@@ -18,7 +18,7 @@ public class RefreshToken : BaseEntity<Guid>
 
     public Guid UserId { get; set; }
 
-    public virtual User User { get; set; } = null!;
+    public virtual AppUser User { get; set; } = null!;
 
     public bool IsExpired => DateTime.UtcNow >= ExpiresAt;
 

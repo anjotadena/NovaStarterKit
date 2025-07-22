@@ -1,11 +1,9 @@
-﻿using System.Net.Sockets;
-using Domain.Common;
-using Domain.Enums;
+﻿using Domain.Common;
 using Domain.ValueObjects;
 
 namespace Domain.Entities;
 
-public class User : BaseEntity<Guid>
+public class AppUser : BaseEntity<Guid>
 {
     public string FirstName { get; private set; } = string.Empty;
 
@@ -23,6 +21,10 @@ public class User : BaseEntity<Guid>
 
     public DateTime? LastLoginDate { get; set; }
 
+    public string SecurityStamp { get; set; } = string.Empty;
+
+    public string ConcurrencyStamp { get; set; } = string.Empty;
+
     public int FailedLoginAttempts { get; set; } = 0;
 
     public DateTime? LockoutEnd { get; set; }
@@ -36,30 +38,4 @@ public class User : BaseEntity<Guid>
     public string FullName => $"{FirstName} {LastName}".Trim();
 
     public bool IsLockedOut => LockoutEnd.HasValue && LockoutEnd > DateTime.UtcNow;
-
-    public Role Role { get; private set; } = default!;
-
-    //private User() { }
-
-    //public User(string firstName, string lastName, Email email, string password, Role role)
-    //{
-    //    Id = Guid.NewGuid();
-    //    FirstName = firstName;
-    //    LastName = lastName;
-    //    Email = email;
-    //    HashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
-    //    Role = role;
-    //}
-
-    //public void ChangePassword(string value)
-    //{
-    //    HashedPassword = value;
-    //}
-
-    //public void ChangeEmail(Email value)
-    //{
-    //    Email = value;
-    //}
-
-    //public bool VerifyPassword(string password) => BCrypt.Net.BCrypt.Verify(password, HashedPassword);
 }

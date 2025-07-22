@@ -2,7 +2,7 @@
 
 namespace Domain.Entities;
 
-public class Role : BaseEntity<Guid>
+public class AppRole : BaseEntity<Guid>
 {
     public string Name { get; set; } = string.Empty;
 

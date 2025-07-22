@@ -18,8 +18,8 @@ public static class DependencyInjection
         services.AddScoped(typeof(IRepository<,>), typeof(GenericRepository<,>));
 
         // Specific override for each entities  
-        services.AddScoped<IRepository<User, Guid>, UserRepository>();
-        services.AddScoped<IRepository<Role, Guid>, RoleRepository>();
+        services.AddScoped<IRepository<AppUser, Guid>, UserRepository>();
+        services.AddScoped<IRepository<AppRole, Guid>, RoleRepository>();
         services.AddScoped<IRepository<Permission, Guid>, PermissionRepository>();
 
         // Unit of work  

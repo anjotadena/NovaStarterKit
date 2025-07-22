@@ -21,7 +21,7 @@ public static class TestSetup
             options.UseInMemoryDatabase("TestDb_NovaStarterKit");
         });
 
-        services.AddScoped<IRepository<User, Guid>, GenericRepository<User, Guid>>();
+        services.AddScoped<IRepository<AppUser, Guid>, GenericRepository<AppUser, Guid>>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IUserService, UserService>();
 

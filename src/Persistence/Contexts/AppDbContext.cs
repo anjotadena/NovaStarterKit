@@ -6,7 +6,12 @@ namespace Persistence.Contexts;
 
 public class AppDbContext : DbContext
 {
-    public DbSet<User> Users => Set<User>();
+    public DbSet<AppUser> Users => Set<AppUser>();
+    public DbSet<AppRole> Roles => Set<AppRole>();
+    public DbSet<Permission> Permissions => Set<Permission>();
+    public DbSet<UserRole> UserRoles => Set<UserRole>();
+    public DbSet<RolePermission> RolePermissions => Set<RolePermission>();
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
